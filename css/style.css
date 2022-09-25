@@ -4,7 +4,6 @@
 /* white color #FFFFFF */
 /* color studio #000000 #FFFFFF*/
 
-
 /* bg color #F5F5F5 */
 /* bg color hero #2F303A */
 
@@ -24,29 +23,33 @@
 :root {
 	--main-color-title: #212121;
 	--main-color-text: #757575;
-	--color-blue: #2196F3;
-	--color-white: #FFFFFF;
-	--hover-button: #188CE8;
-	--bg-color-dark: #2F303A;
-	--bg-color-grey: #F5F5F5;
+	--color-blue: #2196f3;
+	--color-white: #ffffff;
+	--hover-button: #188ce8;
+	--bg-color-dark: #2f303a;
+	--bg-color-grey: #f5f5f5;
 	--color-black: #000000;
-	--bg-color-cards: #F5F4FA;
+	--bg-color-cards: #f5f4fa;
 }
 
 body {
 	color: var(--main-color-title);
 	background-color: var(--color-white);
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-size: 14px;
 	line-height: 1.17;
 	letter-spacing: 0.03em;
 }
 a {
-	text-decoration:none;
+	text-decoration: none;
 	letter-spacing: 0.03em;
 }
-ul li {
+ul,
+ol {
 	list-style: none;
+	margin-top: 0;
+	margin: 0;
+	padding: 0;
 }
 h1,
 h2,
@@ -56,6 +59,15 @@ h5,
 h6 {
 	font-size: inherit;
 	font-weight: inherit;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0;
 }
 button {
 	cursor: pointer;
@@ -65,12 +77,18 @@ button {
 	padding-left: 15px;
 	padding-right: 15px;
 	margin: 0 auto;
+	outline: 1px solid tomato;
 }
 
 /* header */
 header {
 	padding-top: 24px;
 	padding-bottom: 25px;
+	border-bottom: 1px solid #ececec;
+}
+.main-header {
+	display: flex;
+	align-items: center;
 }
 .nav-link-active {
 	color: var(--color-blue);
@@ -81,13 +99,22 @@ ul {
 }
 .logo {
 	color: var(--color-blue);
-	font-family: 'Raleway', sans-serif;
+	font-family: "Raleway", sans-serif;
 	font-size: 26px;
 	font-weight: 700;
 	line-height: 1.19;
 }
 .studio-general {
 	color: var(--color-black);
+}
+.main-nav {
+	display: flex;
+	gap: 93px;
+}
+.menu-navigation {
+	display: flex;
+	gap: 50px;
+	align-items: center;
 }
 .main-nav a {
 	font-weight: 500;
@@ -100,6 +127,11 @@ ul {
 .nav-link:hover,
 .nav-link:focus {
 	color: var(--color-blue);
+}
+.contact-info {
+	display: flex;
+	gap: 50px;
+	margin-left: auto;
 }
 .contact-info a {
 	font-weight: 500;
@@ -128,6 +160,8 @@ ul {
 
 .hero {
 	background-color: var(--bg-color-dark);
+	text-align: center;
+	padding: 200px 0 200px 0;
 }
 
 .hero-title {
@@ -138,6 +172,9 @@ ul {
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
 	text-align: center;
+	margin-top: 0;
+	max-width: 696px;
+	margin: 0 auto;
 	margin-bottom: 30px;
 }
 
@@ -150,6 +187,10 @@ ul {
 	line-height: 1.87;
 	letter-spacing: 0.06em;
 	text-align: center;
+	border: solid var(--color-blue);
+	border-radius: 4px;
+	min-width: 216px;
+	padding: 10px 0;
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -157,7 +198,6 @@ ul {
 }
 
 /* section 1 */
-
 .title {
 	font-size: 36px;
 	font-weight: 700;
@@ -167,47 +207,78 @@ ul {
 }
 .benefits-list {
 	padding: 94px 0;
+	display: flex;
+	gap: 30px;
+	margin-top: 0;
+	margin-bottom: 0;
 }
-
+.benefits-list li {
+	width: calc((100% - 90px) / 4);
+}
 .benefits-list .subtitle {
 	text-transform: uppercase;
 	font-size: 14px;
 	font-weight: 700;
-	line-height: 1.14;
+	line-height: 1.71;
+	margin-bottom: 10px;
 }
 
 .benefits-list p {
 	color: var(--main-color-text);
-	line-height: 1.17;
+	line-height: 1.71;
+	margin-bottom: 0;
 }
+/* what we do pics */
 
-.works-section {}
-
+.what-we-do-list {
+	display: flex;
+	gap: 30px;
+	padding: 0;
+	justify-content: center;
+}
+.what-we-do-list li {
+	width: calc((100%-60px) / 3);
+}
+.what-we-do-list img {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
 /* team section */
+.team {
+	padding: 94px 0;
+}
 
 .about-team {
 	background-color: var(--bg-color-cards);
 }
-
-.about-team-list li {
-	background-color: var(--color-white);
+.about-team-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
 }
 .teammate-card {
 	padding-bottom: 30px;
+	background-color: var(--color-white);
+	width: calc(100% / 4 - 30px);
 }
 .teammate-name {
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 1.18;
 	margin: 30px 0px 10px 0px;
+	text-align: center;
 }
 
 .about-team-list p {
 	color: var(--main-color-text);
 	font-size: 16px;
 	line-height: 1.18;
+	margin-bottom: 0;
+	text-align: center;
 }
-.team-img {}
+.team-img {
+}
 
 /* portfolio */
 .filters {
@@ -249,14 +320,14 @@ ul {
 /* footer */
 
 footer {
-	background-color: #2F303A;
+	background-color: #2f303a;
 }
-.contact-info {
+.contact-info-footer {
 	font-style: normal;
 	line-height: 1.71;
 }
-.contact-info a:hover,
-.contact-info a:focus {
+.contact-info-footer a:hover,
+.contact-info-footer a:focus {
 	color: var(--color-blue);
 }
 .location {
@@ -266,8 +337,6 @@ footer {
 .studio-footer {
 	color: var(--color-white);
 }
-
-.address {}
 
 .contact-footer {
 	color: rgba(255, 255, 255, 0.6);
