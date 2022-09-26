@@ -290,7 +290,7 @@ ul {
 	display: flex;
 	justify-content: center;
 	gap: 8px;
-	padding-bottom: 34px;
+	margin-bottom: 50px;
 }
 .button-filter {
 	color: var(--main-color-title);
