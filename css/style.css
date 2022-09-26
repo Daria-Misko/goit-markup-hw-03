@@ -74,7 +74,7 @@ button {
 	cursor: pointer;
 }
 .container {
-	width: 1170px;
+	width: 1200px;
 	padding-left: 15px;
 	padding-right: 15px;
 	margin: 0 auto;
@@ -187,7 +187,7 @@ ul {
 	line-height: 1.87;
 	letter-spacing: 0.06em;
 	text-align: center;
-	border: solid var(--color-blue);
+	border: none;
 	border-radius: 4px;
 	min-width: 216px;
 	padding: 10px 0;
@@ -198,6 +198,9 @@ ul {
 }
 
 /* section 1 */
+.benefits-section {
+	padding: 94px 0;
+}
 .title {
 	font-size: 36px;
 	font-weight: 700;
@@ -206,7 +209,6 @@ ul {
 	margin-bottom: 50px;
 }
 .benefits-list {
-	padding: 94px 0;
 	display: flex;
 	gap: 30px;
 	margin-top: 0;
@@ -226,11 +228,11 @@ ul {
 .benefits-list p {
 	color: var(--main-color-text);
 	line-height: 1.71;
-	margin-bottom: 0;
+	margin: 0;
 }
 /* what we do pics */
-.what-we-do {
-	padding: 94px 0;
+.works-section {
+	padding-bottom: 94px;
 }
 .what-we-do-list {
 	display: flex;
@@ -247,11 +249,8 @@ ul {
 	margin: 0;
 }
 /* team section */
-.team {
+.about-team-section {
 	padding: 94px 0;
-}
-
-.about-team {
 	background-color: var(--bg-color-cards);
 }
 .about-team-list {
@@ -262,7 +261,7 @@ ul {
 .teammate-card {
 	padding-bottom: 30px;
 	background-color: var(--color-white);
-	width: calc(100% / 4 - 30px);
+	width: calc((100% - 90px) / 4);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
 		0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 0px 0px 4px 4px;
@@ -284,16 +283,14 @@ ul {
 }
 
 /* portfolio */
-.portfolio {
+.portfolio-section {
 	padding: 94px 0;
-}
-.filters-group {
-	padding-bottom: 34px;
 }
 .filters {
 	display: flex;
 	justify-content: center;
 	gap: 8px;
+	padding-bottom: 34px;
 }
 .button-filter {
 	color: var(--main-color-title);
@@ -325,6 +322,7 @@ ul {
 }
 .examples-item-about {
 	border: 1px solid var(--border-cards-color);
+	border-top: none;
 	padding: 20px 24px;
 }
 .examples-title {
@@ -356,6 +354,10 @@ footer {
 	font-style: normal;
 	line-height: 1.71;
 }
+.logo-footer {
+	display: block;
+	margin-bottom: 20px;
+}
 .contact-info-footer a:hover,
 .contact-info-footer a:focus {
 	color: var(--color-blue);
@@ -373,7 +375,4 @@ footer {
 }
 .contact-item-footer:not(:last-child) {
 	margin-bottom: 10px;
-}
-.contact-item-footer:first-child {
-	margin-top: 20px;
 }
